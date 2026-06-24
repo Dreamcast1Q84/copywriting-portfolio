@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Copywriter Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        :root {
+            --primary: #111827;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .portfolio-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .section-header {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(to right, #111827, transparent);
+        }
+
+        .copy-sample {
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #111827;
+        }
+
+        .spec-badge {
+            background-color: #f3e8ff;
+            color: #6b21a8;
+            font-size: 0.75rem;
+            padding: 2px 10px;
+            border-radius: 9999px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-zinc-50 text-zinc-800">
+    <!-- NAV -->
+    <nav class="bg-white border-b border-zinc-200 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 bg-zinc-900 rounded-xl flex items-center justify-center">
+                    <span class="text-white font-bold text-xl tracking-tighter">YC</span>
+                </div>
+                <div>
+                    <span class="font-semibold text-xl tracking-tight">Your Name</span>
+                    <span class="text-xs text-zinc-500 block -mt-1">COPYWRITER</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="#about" class="nav-link text-zinc-600 hover:text-zinc-900">About</a>
+                <a href="#work" class="nav-link text-zinc-600 hover:text-zinc-900">Work</a>
+                <a href="#services" class="nav-link text-zinc-600 hover:text-zinc-900">Services</a>
+                <a href="#contact" class="nav-link text-zinc-600 hover:text-zinc-900">Contact</a>
+            </div>
+            
+            <div>
+                <a href="#contact" 
+                   class="px-5 py-2.5 bg-zinc-900 hover:bg-black text-white text-sm font-semibold rounded-2xl transition-colors flex items-center gap-x-2">
+                    <span>Let's talk</span>
+                    <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="max-w-5xl mx-auto px-6 pt-16 pb-20">
+        <div class="max-w-3xl">
+            <div class="inline-flex items-center gap-x-2 bg-white px-4 py-1.5 rounded-3xl shadow-sm border border-zinc-200 mb-6">
+                <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                <span class="text-sm font-medium text-zinc-600">Available for freelance projects</span>
+            </div>
+            
+            <h1 class="text-6xl md:text-7xl font-semibold tracking-tighter leading-none mb-6">
+                Words that<br> 
+                <span class="text-zinc-900">sell.</span>
+            </h1>
+            
+            <p class="max-w-md text-xl text-zinc-600 mb-8">
+                I'm a copywriter who helps brands connect with their audience through clear, persuasive, and conversion-focused writing.
+            </p>
+            
+            <div class="flex flex-wrap items-center gap-4">
+                <a href="#work" 
+                   class="inline-flex items-center justify-center px-8 py-4 bg-zinc-900 hover:bg-black text-white font-semibold rounded-3xl text-base transition-all active:scale-[0.985]">
+                    View my work
+                </a>
+                
+                <a href="#contact" 
+                   class="inline-flex items-center justify-center px-7 py-4 border border-zinc-300 hover:bg-white font-medium rounded-3xl text-base transition-colors">
+                    Get in touch
+                </a>
+            </div>
+            
+            <div class="mt-8 flex items-center gap-x-6 text-sm text-zinc-500">
+                <div class="flex -space-x-2">
+                    <div class="w-7 h-7 bg-zinc-200 border border-white rounded-full overflow-hidden ring-1 ring-white"><img src="https://i.pravatar.cc/28?img=28" alt=""></div>
+                    <div class="w-7 h-7 bg-zinc-200 border border-white rounded-full overflow-hidden ring-1 ring-white"><img src="https://i.pravatar.cc/28?img=47" alt=""></div>
+                    <div class="w-7 h-7 bg-zinc-200 border border-white rounded-full overflow-hidden ring-1 ring-white"><img src="https://i.pravatar.cc/28?img=12" alt=""></div>
+                </div>
+                <span>Featured in <span class="font-medium text-zinc-700">Spec work for growing brands</span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-200">
+        <div class="grid md:grid-cols-12 gap-x-12 items-start">
+            <div class="md:col-span-5 mb-10 md:mb-0">
+                <h2 class="text-4xl font-semibold tracking-tight mb-4 section-header">Hey, I'm [Your Name]</h2>
+                <p class="text-lg text-zinc-600">A self-taught copywriter passionate about turning complex ideas into simple, compelling stories that drive action.</p>
+            </div>
+            
+            <div class="md:col-span-7">
+                <div class="prose prose-zinc max-w-none text-[15.5px] text-zinc-600">
+                    <p>I started copywriting because I love the challenge of making people feel something — and then take action. Whether it's a homepage that makes visitors say "this is exactly what I need" or an email that gets opened and clicked.</p>
+                    
+                    <p class="mt-4">Before diving into copywriting full-time, I honed my communication skills through [mention any background: customer service, sales, content creation, school projects, previous job writing, blogging, etc.]. Those experiences taught me how to understand audiences deeply and write with empathy.</p>
+                    
+                    <p class="mt-4">I'm currently building my portfolio through <span class="font-medium">spec work</span> and personal projects. Every piece here represents deliberate practice in research, strategy, and persuasive writing.</p>
+                </div>
+                
+                <div class="mt-8 flex flex-wrap gap-3">
+                    <div class="px-4 py-1.5 bg-white border border-zinc-200 rounded-2xl text-sm flex items-center gap-x-2">
+                        <i class="fas fa-globe text-emerald-600"></i>
+                        <span class="font-medium">Based in [Your City]</span>
+                    </div>
+                    <div class="px-4 py-1.5 bg-white border border-zinc-200 rounded-2xl text-sm flex items-center gap-x-2">
+                        <i class="fas fa-clock text-emerald-600"></i>
+                        <span class="font-medium">Open to remote projects worldwide</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="bg-white border-y border-zinc-200 py-16">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-10">
+                <div>
+                    <span class="uppercase tracking-[1.5px] text-xs font-semibold text-zinc-500">WHAT I DO</span>
+                    <h2 class="text-4xl font-semibold tracking-tight mt-1">Copywriting services</h2>
+                </div>
+                <a href="#contact" class="hidden md:block text-sm font-medium flex items-center gap-x-1.5 group">
+                    Discuss your project 
+                    <span class="group-hover:translate-x-0.5 transition">→</span>
+                </a>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-5">
+                <!-- Service cards -->
+                <div class="bg-zinc-50 border border-zinc-100 p-7 rounded-3xl">
+                    <div class="w-11 h-11 flex items-center justify-center bg-white border border-zinc-200 rounded-2xl mb-6">
+                        <i class="fas fa-desktop text-xl text-zinc-700"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">Website &amp; Landing Page Copy</h3>
+                    <p class="text-sm text-zinc-600">Hero sections, value propositions, about pages, and full sales pages that convert visitors into leads or customers.</p>
+                    <div class="mt-5 text-xs font-medium text-emerald-700 flex items-center gap-x-1">
+                        <span>→</span> <span>High-converting web copy</span>
+                    </div>
+                </div>
+                
+                <div class="bg-zinc-50 border border-zinc-100 p-7 rounded-3xl">
+                    <div class="w-11 h-11 flex items-center justify-center bg-white border border-zinc-200 rounded-2xl mb-6">
+                        <i class="fas fa-envelope text-xl text-zinc-700"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">Email Marketing Sequences</h3>
+                    <p class="text-sm text-zinc-600">Welcome series, nurture emails, launch campaigns, and abandoned cart flows that build relationships and drive revenue.</p>
+                    <div class="mt-5 text-xs font-medium text-emerald-700 flex items-center gap-x-1">
+                        <span>→</span> <span>Story-driven email copy</span>
+                    </div>
+                </div>
+                
+                <div class="bg-zinc-50 border border-zinc-100 p-7 rounded-3xl">
+                    <div class="w-11 h-11 flex items-center justify-center bg-white border border-zinc-200 rounded-2xl mb-6">
+                        <i class="fas fa-ad text-xl text-zinc-700"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">Ads &amp; Social Copy</h3>
+                    <p class="text-sm text-zinc-600">Scroll-stopping Facebook/Instagram ads, LinkedIn posts, and short-form content that captures attention in noisy feeds.</p>
+                    <div class="mt-5 text-xs font-medium text-emerald-700 flex items-center gap-x-1">
+                        <span>→</span> <span>Attention-grabbing ad copy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORK / PORTFOLIO -->
+    <section id="work" class="max-w-5xl mx-auto px-6 py-20">
+        <div class="flex justify-between items-end mb-10">
+            <div>
+                <span class="uppercase tracking-[1.5px] text-xs font-semibold text-zinc-500">SELECTED WORK</span>
+                <h2 class="text-4xl font-semibold tracking-tight">Portfolio samples</h2>
+                <p class="mt-2 text-zinc-600 max-w-md">All pieces below are <span class="font-medium">spec work</span> created to demonstrate strategy, voice, and results-focused copywriting.</p>
+            </div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+            
+            <!-- Sample 1 -->
+            <div class="portfolio-card bg-white border border-zinc-200 rounded-3xl overflow-hidden group">
+                <div class="px-7 pt-7 pb-5">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <span class="spec-badge">SPEC WORK</span>
+                            <h3 class="font-semibold text-2xl tracking-tight mt-1">Lumina Coffee Co.</h3>
+                            <p class="text-sm text-zinc-500">E-commerce • Specialty Coffee</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xs text-emerald-600 font-medium">SALES PAGE</div>
+                        </div>
+                    </div>
+                    
+                    <div class="copy-sample text-zinc-600 mb-5">
+                        <p class="italic">"Awaken your senses. Every cup tells a story of small-batch roasting, ethically sourced beans, and the quiet ritual of slow mornings."</p>
+                        <p class="text-xs mt-3 text-zinc-500">— Hero section rewrite for their homepage. Focused on emotional connection + clear product benefit.</p>
+                    </div>
+                    
+                    <div class="flex items-center justify-between text-xs">
+                        <div>
+                            <span class="font-medium">Goal:</span> Increase direct-to-consumer sales<br>
+                            <span class="font-medium">Approach:</span> Storytelling + sensory language
+                        </div>
+                        <a href="#" class="text-emerald-700 font-medium flex items-center gap-x-1 text-sm group-hover:gap-x-2 transition-all">
+                            View full sample <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-zinc-100 h-2.5 flex">
+                    <div class="bg-emerald-600 h-2.5 w-[65%]"></div>
+                </div>
+            </div>
+            
+            <!-- Sample 2 -->
+            <div class="portfolio-card bg-white border border-zinc-200 rounded-3xl overflow-hidden group">
+                <div class="px-7 pt-7 pb-5">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <span class="spec-badge">SPEC WORK</span>
+                            <h3 class="font-semibold text-2xl tracking-tight mt-1">FlowState App</h3>
+                            <p class="text-sm text-zinc-500">SaaS • Productivity</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xs text-emerald-600 font-medium">EMAIL SEQUENCE</div>
+                        </div>
+                    </div>
+                    
+                    <div class="copy-sample text-zinc-600 mb-5">
+                        <p class="italic">"Day 1: Your first 10 minutes of deep work. No notifications. Just you and the thing that matters most."</p>
+                        <p class="text-xs mt-3 text-zinc-500">— Welcome email #1 in a 5-email onboarding sequence designed to boost activation and reduce churn.</p>
+                    </div>
+                    
+                    <div class="flex items-center justify-between text-xs">
+                        <div>
+                            <span class="font-medium">Goal:</span> Improve user onboarding &amp; retention<br>
+                            <span class="font-medium">Approach:</span> Micro-habits + gentle accountability
+                        </div>
+                        <a href="#" class="text-emerald-700 font-medium flex items-center gap-x-1 text-sm group-hover:gap-x-2 transition-all">
+                            View full sequence <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-zinc-100 h-2.5 flex">
+                    <div class="bg-emerald-600 h-2.5 w-[80%]"></div>
+                </div>
+            </div>
+            
+            <!-- Sample 3 -->
+            <div class="portfolio-card bg-white border border-zinc-200 rounded-3xl overflow-hidden group">
+                <div class="px-7 pt-7 pb-5">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <span class="spec-badge">SPEC WORK</span>
+                            <h3 class="font-semibold text-2xl tracking-tight mt-1">VitaBloom Supplements</h3>
+                            <p class="text-sm text-zinc-500">Health &amp; Wellness • E-commerce</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xs text-emerald-600 font-medium">AD + PRODUCT PAGE</div>
+                        </div>
+                    </div>
+                    
+                    <div class="copy-sample text-zinc-600 mb-5">
+                        <p class="italic">"Tired of afternoon crashes? VitaBloom’s Focus formula gives you clean, sustained energy — without the jitters or 3pm slump."</p>
+                        <p class="text-xs mt-3 text-zinc-500">— Instagram ad + corresponding product description rewrite. Emphasized benefit over features.</p>
+                    </div>
+                    
+                    <div class="flex items-center justify-between text-xs">
+                        <div>
+                            <span class="font-medium">Goal:</span> Boost ad CTR and page conversions<br>
+                            <span class="font-medium">Approach:</span> Problem → Agitation → Solution
+                        </div>
+                        <a href="#" class="text-emerald-700 font-medium flex items-center gap-x-1 text-sm group-hover:gap-x-2 transition-all">
+                            View ad + page <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-zinc-100 h-2.5 flex">
+                    <div class="bg-emerald-600 h-2.5 w-[55%]"></div>
+                </div>
+            </div>
+            
+            <!-- Sample 4 - Add your own -->
+            <div class="portfolio-card bg-white border border-dashed border-zinc-300 rounded-3xl overflow-hidden flex flex-col items-center justify-center p-10 text-center group hover:border-zinc-400 transition-colors">
+                <div class="w-14 h-14 rounded-2xl bg-zinc-100 flex items-center justify-center mb-5 group-hover:bg-zinc-200 transition">
+                    <i class="fas fa-plus text-3xl text-zinc-400"></i>
+                </div>
+                <h3 class="font-semibold text-xl tracking-tight">Your next sample here</h3>
+                <p class="text-sm text-zinc-500 mt-2 max-w-[220px]">Replace this with your own spec project. Pick a brand you love and rewrite their copy.</p>
+                <div class="mt-6 text-xs px-4 py-1.5 bg-white border border-zinc-200 rounded-2xl inline-block font-medium">Add your work →</div>
+            </div>
+            
+        </div>
+        
+        <div class="mt-8 text-center">
+            <p class="text-sm text-zinc-500">Want to see the full strategy + process behind any of these? <a href="#contact" class="font-medium text-emerald-700 hover:underline">Just ask</a>.</p>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS / SOCIAL PROOF (placeholder) -->
+    <section class="bg-zinc-900 text-white py-14">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="max-w-md mx-auto">
+                <div class="flex justify-center mb-6">
+                    <div class="flex">
+                        <i class="fas fa-star text-amber-400"></i>
+                        <i class="fas fa-star text-amber-400"></i>
+                        <i class="fas fa-star text-amber-400"></i>
+                        <i class="fas fa-star text-amber-400"></i>
+                        <i class="fas fa-star-half-alt text-amber-400"></i>
+                    </div>
+                </div>
+                
+                <blockquote class="text-xl font-light tracking-tight">
+                    “Working with [Your Name] on our launch emails completely changed how we think about communicating with our audience. The open rates speak for themselves.”
+                </blockquote>
+                <div class="mt-5 text-sm">
+                    <span class="font-semibold">— Alex Rivera</span><br>
+                    <span class="text-zinc-400 text-xs">Founder, FlowState (fictional / replace with real when you have one)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section id="contact" class="max-w-5xl mx-auto px-6 py-20 text-center">
+        <div class="max-w-lg mx-auto">
+            <h2 class="text-4xl font-semibold tracking-tighter mb-3">Ready to make your words work harder?</h2>
+            <p class="text-zinc-600 mb-8">Whether you have a live project or just want to chat about how copy can help your brand, I'd love to hear from you.</p>
+            
+            <a href="mailto:your@email.com" 
+               class="inline-flex items-center justify-center gap-x-3 px-9 py-4 bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 transition text-white font-semibold rounded-3xl text-lg">
+                <span>Send me an email</span>
+                <i class="fas fa-paper-plane"></i>
+            </a>
+            
+            <div class="mt-8 text-xs text-zinc-500">
+                Or find me on <a href="#" class="underline hover:text-zinc-700">LinkedIn</a> • <a href="#" class="underline hover:text-zinc-700">Twitter/X</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-zinc-200 py-8 text-xs text-center text-zinc-500">
+        <div class="max-w-5xl mx-auto px-6">
+            © <span id="year"></span> [Your Name]. Built with intention. All spec work clearly labeled.
+            <br>
+            <span class="text-[10px]">This is a starter template. Customize it with your real projects, photos, and voice.</span>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--accent', '#111827');
+        }
+        
+        // Dynamic year
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Simple smooth scroll for nav
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        initializeTailwind();
+        
+        // Easter egg: console message for the user
+        console.log('%c[Portfolio Template] Hey! This is your starter portfolio. Edit the placeholders, add your real spec samples, and host it for free on Carrd, Netlify, or GitHub Pages. You got this!', 'color:#666; font-size:9px');
+    </script>
+</body>
+</html>
